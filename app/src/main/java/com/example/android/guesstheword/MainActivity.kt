@@ -17,6 +17,7 @@
 package com.example.android.guesstheword
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 
 /**
