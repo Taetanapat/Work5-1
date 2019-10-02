@@ -57,9 +57,11 @@ class GameFragment : Fragment() {
         viewModel.resetList()
         viewModel.nextWord()
 
-        binding.correctButton.setOnClickListener { onCorrect() }
-        binding.skipButton.setOnClickListener { onSkip() }
-        binding.endGameButton.setOnClickListener { onEndGame() }
+        binding.gameViewModel = viewModel
+
+//        binding.correctButton.setOnClickListener { onCorrect() }
+//        binding.skipButton.setOnClickListener { onSkip() }
+//        binding.endGameButton.setOnClickListener { onEndGame() }
 
         viewModel.score.observe(this, Observer {
             newScore ->
@@ -82,16 +84,16 @@ class GameFragment : Fragment() {
 
     /** Methods for button click handlers **/
 
-    private fun onSkip() {
-        viewModel.onSkip()
-//        updateWordText()
-//        updateScoreText()
-    }
-    private fun onCorrect() {
-        viewModel.onCorrect()
-//        updateScoreText()
-//        updateWordText()
-    }
+//    private fun onSkip() {
+//        viewModel.onSkip()
+////        updateWordText()
+////        updateScoreText()
+//    }
+//    private fun onCorrect() {
+//        viewModel.onCorrect()
+////        updateScoreText()
+////        updateWordText()
+//    }
 
 
     /** Methods for updating the UI **/
@@ -103,9 +105,9 @@ class GameFragment : Fragment() {
 //    private fun updateScoreText() {
 //        binding.scoreText.text = viewModel._score.value.toString()
 //    }
-    private  fun onEndGame(){
-        gameFinished()
-    }
+//    private  fun onEndGame(){
+//        gameFinished()
+//    }
 
     private  fun gameFinished(){
         Toast.makeText(activity, "Game has just finished", Toast.LENGTH_SHORT).show()
