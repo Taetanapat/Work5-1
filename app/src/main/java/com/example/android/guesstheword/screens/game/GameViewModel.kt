@@ -13,7 +13,7 @@ class GameViewModel : ViewModel() {
     /**
      * Resets the list of words and randomizes the order
      */
-    private fun resetList() {
+     fun resetList() {
         wordList = mutableListOf(
                 "queen",
                 "hospital",
@@ -48,7 +48,7 @@ class GameViewModel : ViewModel() {
     /**
      * Moves to the next word in the list
      */
-    private fun nextWord() {
+   fun nextWord() {
         if (!wordList.isEmpty()) {
             //Select and remove a word from the list
             word = wordList.removeAt(0)
